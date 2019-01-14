@@ -1,0 +1,1239 @@
+-----------------------------------com.example.Blog.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+
+})
+public class Blog {
+
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Byline.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"original",
+"person",
+"organization"
+})
+public class Byline {
+
+@JsonProperty("original")
+private String original;
+@JsonProperty("person")
+private List<Person> person = null;
+@JsonProperty("organization")
+private String organization;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("original")
+public String getOriginal() {
+return original;
+}
+
+@JsonProperty("original")
+public void setOriginal(String original) {
+this.original = original;
+}
+
+@JsonProperty("person")
+public List<Person> getPerson() {
+return person;
+}
+
+@JsonProperty("person")
+public void setPerson(List<Person> person) {
+this.person = person;
+}
+
+@JsonProperty("organization")
+public String getOrganization() {
+return organization;
+}
+
+@JsonProperty("organization")
+public void setOrganization(String organization) {
+this.organization = organization;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Doc.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"web_url",
+"snippet",
+"blog",
+"multimedia",
+"headline",
+"keywords",
+"document_type",
+"section_name",
+"type_of_material",
+"_id",
+"word_count",
+"score",
+"print_page",
+"source",
+"pub_date",
+"news_desk",
+"byline",
+"uri"
+})
+public class Doc {
+
+@JsonProperty("web_url")
+private String webUrl;
+@JsonProperty("snippet")
+private String snippet;
+@JsonProperty("blog")
+private Blog blog;
+@JsonProperty("multimedia")
+private List<Multimedium> multimedia = null;
+@JsonProperty("headline")
+private Headline headline;
+@JsonProperty("keywords")
+private List<Keyword> keywords = null;
+@JsonProperty("document_type")
+private String documentType;
+@JsonProperty("section_name")
+private String sectionName;
+@JsonProperty("type_of_material")
+private String typeOfMaterial;
+@JsonProperty("_id")
+private String id;
+@JsonProperty("word_count")
+private Integer wordCount;
+@JsonProperty("score")
+private Double score;
+@JsonProperty("print_page")
+private String printPage;
+@JsonProperty("source")
+private String source;
+@JsonProperty("pub_date")
+private String pubDate;
+@JsonProperty("news_desk")
+private String newsDesk;
+@JsonProperty("byline")
+private Byline byline;
+@JsonProperty("uri")
+private String uri;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("web_url")
+public String getWebUrl() {
+return webUrl;
+}
+
+@JsonProperty("web_url")
+public void setWebUrl(String webUrl) {
+this.webUrl = webUrl;
+}
+
+@JsonProperty("snippet")
+public String getSnippet() {
+return snippet;
+}
+
+@JsonProperty("snippet")
+public void setSnippet(String snippet) {
+this.snippet = snippet;
+}
+
+@JsonProperty("blog")
+public Blog getBlog() {
+return blog;
+}
+
+@JsonProperty("blog")
+public void setBlog(Blog blog) {
+this.blog = blog;
+}
+
+@JsonProperty("multimedia")
+public List<Multimedium> getMultimedia() {
+return multimedia;
+}
+
+@JsonProperty("multimedia")
+public void setMultimedia(List<Multimedium> multimedia) {
+this.multimedia = multimedia;
+}
+
+@JsonProperty("headline")
+public Headline getHeadline() {
+return headline;
+}
+
+@JsonProperty("headline")
+public void setHeadline(Headline headline) {
+this.headline = headline;
+}
+
+@JsonProperty("keywords")
+public List<Keyword> getKeywords() {
+return keywords;
+}
+
+@JsonProperty("keywords")
+public void setKeywords(List<Keyword> keywords) {
+this.keywords = keywords;
+}
+
+@JsonProperty("document_type")
+public String getDocumentType() {
+return documentType;
+}
+
+@JsonProperty("document_type")
+public void setDocumentType(String documentType) {
+this.documentType = documentType;
+}
+
+@JsonProperty("section_name")
+public String getSectionName() {
+return sectionName;
+}
+
+@JsonProperty("section_name")
+public void setSectionName(String sectionName) {
+this.sectionName = sectionName;
+}
+
+@JsonProperty("type_of_material")
+public String getTypeOfMaterial() {
+return typeOfMaterial;
+}
+
+@JsonProperty("type_of_material")
+public void setTypeOfMaterial(String typeOfMaterial) {
+this.typeOfMaterial = typeOfMaterial;
+}
+
+@JsonProperty("_id")
+public String getId() {
+return id;
+}
+
+@JsonProperty("_id")
+public void setId(String id) {
+this.id = id;
+}
+
+@JsonProperty("word_count")
+public Integer getWordCount() {
+return wordCount;
+}
+
+@JsonProperty("word_count")
+public void setWordCount(Integer wordCount) {
+this.wordCount = wordCount;
+}
+
+@JsonProperty("score")
+public Double getScore() {
+return score;
+}
+
+@JsonProperty("score")
+public void setScore(Double score) {
+this.score = score;
+}
+
+@JsonProperty("print_page")
+public String getPrintPage() {
+return printPage;
+}
+
+@JsonProperty("print_page")
+public void setPrintPage(String printPage) {
+this.printPage = printPage;
+}
+
+@JsonProperty("source")
+public String getSource() {
+return source;
+}
+
+@JsonProperty("source")
+public void setSource(String source) {
+this.source = source;
+}
+
+@JsonProperty("pub_date")
+public String getPubDate() {
+return pubDate;
+}
+
+@JsonProperty("pub_date")
+public void setPubDate(String pubDate) {
+this.pubDate = pubDate;
+}
+
+@JsonProperty("news_desk")
+public String getNewsDesk() {
+return newsDesk;
+}
+
+@JsonProperty("news_desk")
+public void setNewsDesk(String newsDesk) {
+this.newsDesk = newsDesk;
+}
+
+@JsonProperty("byline")
+public Byline getByline() {
+return byline;
+}
+
+@JsonProperty("byline")
+public void setByline(Byline byline) {
+this.byline = byline;
+}
+
+@JsonProperty("uri")
+public String getUri() {
+return uri;
+}
+
+@JsonProperty("uri")
+public void setUri(String uri) {
+this.uri = uri;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Example.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"status",
+"copyright",
+"response"
+})
+public class Example {
+
+@JsonProperty("status")
+private String status;
+@JsonProperty("copyright")
+private String copyright;
+@JsonProperty("response")
+private Response response;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("status")
+public String getStatus() {
+return status;
+}
+
+@JsonProperty("status")
+public void setStatus(String status) {
+this.status = status;
+}
+
+@JsonProperty("copyright")
+public String getCopyright() {
+return copyright;
+}
+
+@JsonProperty("copyright")
+public void setCopyright(String copyright) {
+this.copyright = copyright;
+}
+
+@JsonProperty("response")
+public Response getResponse() {
+return response;
+}
+
+@JsonProperty("response")
+public void setResponse(Response response) {
+this.response = response;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Headline.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"main",
+"kicker",
+"content_kicker",
+"print_headline",
+"name",
+"seo",
+"sub"
+})
+public class Headline {
+
+@JsonProperty("main")
+private String main;
+@JsonProperty("kicker")
+private Object kicker;
+@JsonProperty("content_kicker")
+private Object contentKicker;
+@JsonProperty("print_headline")
+private String printHeadline;
+@JsonProperty("name")
+private Object name;
+@JsonProperty("seo")
+private Object seo;
+@JsonProperty("sub")
+private Object sub;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("main")
+public String getMain() {
+return main;
+}
+
+@JsonProperty("main")
+public void setMain(String main) {
+this.main = main;
+}
+
+@JsonProperty("kicker")
+public Object getKicker() {
+return kicker;
+}
+
+@JsonProperty("kicker")
+public void setKicker(Object kicker) {
+this.kicker = kicker;
+}
+
+@JsonProperty("content_kicker")
+public Object getContentKicker() {
+return contentKicker;
+}
+
+@JsonProperty("content_kicker")
+public void setContentKicker(Object contentKicker) {
+this.contentKicker = contentKicker;
+}
+
+@JsonProperty("print_headline")
+public String getPrintHeadline() {
+return printHeadline;
+}
+
+@JsonProperty("print_headline")
+public void setPrintHeadline(String printHeadline) {
+this.printHeadline = printHeadline;
+}
+
+@JsonProperty("name")
+public Object getName() {
+return name;
+}
+
+@JsonProperty("name")
+public void setName(Object name) {
+this.name = name;
+}
+
+@JsonProperty("seo")
+public Object getSeo() {
+return seo;
+}
+
+@JsonProperty("seo")
+public void setSeo(Object seo) {
+this.seo = seo;
+}
+
+@JsonProperty("sub")
+public Object getSub() {
+return sub;
+}
+
+@JsonProperty("sub")
+public void setSub(Object sub) {
+this.sub = sub;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Keyword.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"name",
+"value",
+"rank",
+"major"
+})
+public class Keyword {
+
+@JsonProperty("name")
+private String name;
+@JsonProperty("value")
+private String value;
+@JsonProperty("rank")
+private Integer rank;
+@JsonProperty("major")
+private String major;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("name")
+public String getName() {
+return name;
+}
+
+@JsonProperty("name")
+public void setName(String name) {
+this.name = name;
+}
+
+@JsonProperty("value")
+public String getValue() {
+return value;
+}
+
+@JsonProperty("value")
+public void setValue(String value) {
+this.value = value;
+}
+
+@JsonProperty("rank")
+public Integer getRank() {
+return rank;
+}
+
+@JsonProperty("rank")
+public void setRank(Integer rank) {
+this.rank = rank;
+}
+
+@JsonProperty("major")
+public String getMajor() {
+return major;
+}
+
+@JsonProperty("major")
+public void setMajor(String major) {
+this.major = major;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Legacy.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"xlarge",
+"xlargewidth",
+"xlargeheight",
+"wide",
+"widewidth",
+"wideheight",
+"thumbnail",
+"thumbnailwidth",
+"thumbnailheight"
+})
+public class Legacy {
+
+@JsonProperty("xlarge")
+private String xlarge;
+@JsonProperty("xlargewidth")
+private Integer xlargewidth;
+@JsonProperty("xlargeheight")
+private Integer xlargeheight;
+@JsonProperty("wide")
+private String wide;
+@JsonProperty("widewidth")
+private Integer widewidth;
+@JsonProperty("wideheight")
+private Integer wideheight;
+@JsonProperty("thumbnail")
+private String thumbnail;
+@JsonProperty("thumbnailwidth")
+private Integer thumbnailwidth;
+@JsonProperty("thumbnailheight")
+private Integer thumbnailheight;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("xlarge")
+public String getXlarge() {
+return xlarge;
+}
+
+@JsonProperty("xlarge")
+public void setXlarge(String xlarge) {
+this.xlarge = xlarge;
+}
+
+@JsonProperty("xlargewidth")
+public Integer getXlargewidth() {
+return xlargewidth;
+}
+
+@JsonProperty("xlargewidth")
+public void setXlargewidth(Integer xlargewidth) {
+this.xlargewidth = xlargewidth;
+}
+
+@JsonProperty("xlargeheight")
+public Integer getXlargeheight() {
+return xlargeheight;
+}
+
+@JsonProperty("xlargeheight")
+public void setXlargeheight(Integer xlargeheight) {
+this.xlargeheight = xlargeheight;
+}
+
+@JsonProperty("wide")
+public String getWide() {
+return wide;
+}
+
+@JsonProperty("wide")
+public void setWide(String wide) {
+this.wide = wide;
+}
+
+@JsonProperty("widewidth")
+public Integer getWidewidth() {
+return widewidth;
+}
+
+@JsonProperty("widewidth")
+public void setWidewidth(Integer widewidth) {
+this.widewidth = widewidth;
+}
+
+@JsonProperty("wideheight")
+public Integer getWideheight() {
+return wideheight;
+}
+
+@JsonProperty("wideheight")
+public void setWideheight(Integer wideheight) {
+this.wideheight = wideheight;
+}
+
+@JsonProperty("thumbnail")
+public String getThumbnail() {
+return thumbnail;
+}
+
+@JsonProperty("thumbnail")
+public void setThumbnail(String thumbnail) {
+this.thumbnail = thumbnail;
+}
+
+@JsonProperty("thumbnailwidth")
+public Integer getThumbnailwidth() {
+return thumbnailwidth;
+}
+
+@JsonProperty("thumbnailwidth")
+public void setThumbnailwidth(Integer thumbnailwidth) {
+this.thumbnailwidth = thumbnailwidth;
+}
+
+@JsonProperty("thumbnailheight")
+public Integer getThumbnailheight() {
+return thumbnailheight;
+}
+
+@JsonProperty("thumbnailheight")
+public void setThumbnailheight(Integer thumbnailheight) {
+this.thumbnailheight = thumbnailheight;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Meta.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"hits",
+"offset",
+"time"
+})
+public class Meta {
+
+@JsonProperty("hits")
+private Integer hits;
+@JsonProperty("offset")
+private Integer offset;
+@JsonProperty("time")
+private Integer time;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("hits")
+public Integer getHits() {
+return hits;
+}
+
+@JsonProperty("hits")
+public void setHits(Integer hits) {
+this.hits = hits;
+}
+
+@JsonProperty("offset")
+public Integer getOffset() {
+return offset;
+}
+
+@JsonProperty("offset")
+public void setOffset(Integer offset) {
+this.offset = offset;
+}
+
+@JsonProperty("time")
+public Integer getTime() {
+return time;
+}
+
+@JsonProperty("time")
+public void setTime(Integer time) {
+this.time = time;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Multimedium.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"rank",
+"subtype",
+"caption",
+"credit",
+"type",
+"url",
+"height",
+"width",
+"legacy",
+"subType",
+"crop_name"
+})
+public class Multimedium {
+
+@JsonProperty("rank")
+private Integer rank;
+@JsonProperty("subtype")
+private String subtype;
+@JsonProperty("caption")
+private Object caption;
+@JsonProperty("credit")
+private Object credit;
+@JsonProperty("type")
+private String type;
+@JsonProperty("url")
+private String url;
+@JsonProperty("height")
+private Integer height;
+@JsonProperty("width")
+private Integer width;
+@JsonProperty("legacy")
+private Legacy legacy;
+@JsonProperty("subType")
+private String subType;
+@JsonProperty("crop_name")
+private String cropName;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("rank")
+public Integer getRank() {
+return rank;
+}
+
+@JsonProperty("rank")
+public void setRank(Integer rank) {
+this.rank = rank;
+}
+
+@JsonProperty("subtype")
+public String getSubtype() {
+return subtype;
+}
+
+@JsonProperty("subtype")
+public void setSubtype(String subtype) {
+this.subtype = subtype;
+}
+
+@JsonProperty("caption")
+public Object getCaption() {
+return caption;
+}
+
+@JsonProperty("caption")
+public void setCaption(Object caption) {
+this.caption = caption;
+}
+
+@JsonProperty("credit")
+public Object getCredit() {
+return credit;
+}
+
+@JsonProperty("credit")
+public void setCredit(Object credit) {
+this.credit = credit;
+}
+
+@JsonProperty("type")
+public String getType() {
+return type;
+}
+
+@JsonProperty("type")
+public void setType(String type) {
+this.type = type;
+}
+
+@JsonProperty("url")
+public String getUrl() {
+return url;
+}
+
+@JsonProperty("url")
+public void setUrl(String url) {
+this.url = url;
+}
+
+@JsonProperty("height")
+public Integer getHeight() {
+return height;
+}
+
+@JsonProperty("height")
+public void setHeight(Integer height) {
+this.height = height;
+}
+
+@JsonProperty("width")
+public Integer getWidth() {
+return width;
+}
+
+@JsonProperty("width")
+public void setWidth(Integer width) {
+this.width = width;
+}
+
+@JsonProperty("legacy")
+public Legacy getLegacy() {
+return legacy;
+}
+
+@JsonProperty("legacy")
+public void setLegacy(Legacy legacy) {
+this.legacy = legacy;
+}
+
+@JsonProperty("subType")
+public String getSubType() {
+return subType;
+}
+
+@JsonProperty("subType")
+public void setSubType(String subType) {
+this.subType = subType;
+}
+
+@JsonProperty("crop_name")
+public String getCropName() {
+return cropName;
+}
+
+@JsonProperty("crop_name")
+public void setCropName(String cropName) {
+this.cropName = cropName;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Person.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"firstname",
+"middlename",
+"lastname",
+"qualifier",
+"title",
+"role",
+"organization",
+"rank"
+})
+public class Person {
+
+@JsonProperty("firstname")
+private String firstname;
+@JsonProperty("middlename")
+private Object middlename;
+@JsonProperty("lastname")
+private String lastname;
+@JsonProperty("qualifier")
+private Object qualifier;
+@JsonProperty("title")
+private Object title;
+@JsonProperty("role")
+private String role;
+@JsonProperty("organization")
+private String organization;
+@JsonProperty("rank")
+private Integer rank;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("firstname")
+public String getFirstname() {
+return firstname;
+}
+
+@JsonProperty("firstname")
+public void setFirstname(String firstname) {
+this.firstname = firstname;
+}
+
+@JsonProperty("middlename")
+public Object getMiddlename() {
+return middlename;
+}
+
+@JsonProperty("middlename")
+public void setMiddlename(Object middlename) {
+this.middlename = middlename;
+}
+
+@JsonProperty("lastname")
+public String getLastname() {
+return lastname;
+}
+
+@JsonProperty("lastname")
+public void setLastname(String lastname) {
+this.lastname = lastname;
+}
+
+@JsonProperty("qualifier")
+public Object getQualifier() {
+return qualifier;
+}
+
+@JsonProperty("qualifier")
+public void setQualifier(Object qualifier) {
+this.qualifier = qualifier;
+}
+
+@JsonProperty("title")
+public Object getTitle() {
+return title;
+}
+
+@JsonProperty("title")
+public void setTitle(Object title) {
+this.title = title;
+}
+
+@JsonProperty("role")
+public String getRole() {
+return role;
+}
+
+@JsonProperty("role")
+public void setRole(String role) {
+this.role = role;
+}
+
+@JsonProperty("organization")
+public String getOrganization() {
+return organization;
+}
+
+@JsonProperty("organization")
+public void setOrganization(String organization) {
+this.organization = organization;
+}
+
+@JsonProperty("rank")
+public Integer getRank() {
+return rank;
+}
+
+@JsonProperty("rank")
+public void setRank(Integer rank) {
+this.rank = rank;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------com.example.Response.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"docs",
+"meta"
+})
+public class Response {
+
+@JsonProperty("docs")
+private List<Doc> docs = null;
+@JsonProperty("meta")
+private Meta meta;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("docs")
+public List<Doc> getDocs() {
+return docs;
+}
+
+@JsonProperty("docs")
+public void setDocs(List<Doc> docs) {
+this.docs = docs;
+}
+
+@JsonProperty("meta")
+public Meta getMeta() {
+return meta;
+}
+
+@JsonProperty("meta")
+public void setMeta(Meta meta) {
+this.meta = meta;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
